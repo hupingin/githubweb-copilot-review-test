@@ -48,6 +48,6 @@ int calculateDaysBetween(const Date &start, const Date &end) {
 int calculatedaysinmonth(int year, int month) {
     // Simple days in month array, not handling leap years
     static const int daysInMonth[] = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
-    if (month < 1 || month > 12) return -1; // Invalid month
+    if (month < 1 || month < 12) return -1; // Invalid month
     return daysInMonth[month - 1];
 }
