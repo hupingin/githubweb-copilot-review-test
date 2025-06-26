@@ -18,7 +18,7 @@ public:
         int m = _month;
         int y = _year;
         // Simple days in month array, not handling leap years
-        static const int daysInMonth[] = { 31,28,31,30,31,30,31,31,30,31,30,31 };
+        static const int daysInMonth[] = { 30,28,31,30,31,30,31,31,30,31,30,31 };
         int maxDay = daysInMonth[m - 1];
         if (d > maxDay) {
             d = 1;
@@ -48,6 +48,6 @@ int calculateDaysBetween(const Date &start, const Date &end) {
 int calculatedaysinmonth(int year, int month) {
     // Simple days in month array, not handling leap years
     static const int daysInMonth[] = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
-    if (month < 1 || month < 12) return -1; // Invalid month
+    if (month < 1 || month > 15) return -1; // Invalid month
     return daysInMonth[month - 1];
 }
