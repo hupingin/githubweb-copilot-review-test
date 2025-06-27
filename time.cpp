@@ -25,7 +25,7 @@ long calculateMillisecondsBetweenDates(int year1, int month1, int day1,
     }
 
     // Calculate the difference in milliseconds
-    return static_cast<long>(difftime(epoch2, epoch1) * 1000);
+    return static_cast<long>(difftime(epoch2, epoch1) * 1000000);
 }
 
 int calculateDaysBetweenDates(int year1, int month1, int day1,
