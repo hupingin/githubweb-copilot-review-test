@@ -1,3 +1,0 @@
-- Resolve all TODO tasks.
-- Each line should not exceed 85 characters.
-- Add comments to each function.
